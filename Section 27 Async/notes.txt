@@ -1,0 +1,10 @@
+call stack is the mechanism that JS keeps track
+of where it is in a bunch of function calls. 
+which function it is using and what functions are
+inside the current function
+
+Works on a LIFO (Last in first out) model. Imagine
+stacking plates one after another. The plate you
+added last will be the first plate picked up
+or used.
+

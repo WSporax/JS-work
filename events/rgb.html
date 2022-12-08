@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    button {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+
+    }
+
+    .info {
+        font-size: 11px;
+        font-weight: 300;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .hide {
+        display: none;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB</title>
+</head>
+
+<body>
+    <h1>Color Exercise!</h1>
+    <h2 id="smack">The color is (255, 255, 255)</h2>
+    <button id="bgbutton">Click Me to change background</button>
+
+    <h3 class="info">Ex 260</h3>
+    <button class="changer">CLICK ME</button>
+    <button class="changer">CLICK ME</button>
+    <button class="changer">CLICK ME</button>
+
+    <h3 class="info">Using a function which uses the "this" keyword</h3>
+    <button class="usingthis">Click me too!</button>
+    <button class="usingthis">Click me too!</button>
+    <button class="usingthis">Click me too!</button>
+
+    <h3 class="info">Ex 261</h3>
+    <button id="ex261btn">Click</button>
+    <input type="text" id="ex261input">
+
+    <h3 id="info">EX 262 - prevents default</h3>
+    <form action="/shelter" id="shelterForm">
+        <input type="text" id="catName">
+        <button>Submit</button>
+    </form>
+    <h3 id="info">ex 263 Available cats</h3>
+    <ul id="ex263cats"></ul>
+
+    <h3 id="info">Ex 264</h3>
+    <form action="/dogs" id="tweetform">
+        <input type="text" name="username" placeholder="username" id="ex264username">
+        <input type="text" name="tweet" placeholder="tweet" id="ex264tweet">
+        <button>Post Tweet</button>
+    </form>
+    <div>
+        <h3>Tweets: </h3>
+    </div>
+
+    <ul id="tweets">
+        <li class="ex264li"></li>
+        <li class="ex264li"></li>
+    </ul>
+
+    <h3 id="info">EX 265</h3>
+    <h4 id="ex265h4">This will update based on what you type</h4>
+    <input type="text" id="ex265input">
+
+    <h3 id="info">EX 266</h3>
+    <div id="ex266div">
+        Click text to hide
+        <button id="ex266btn">Change Color</button>
+    </div>
+
+    <h3 id="info">EX 267</h3>
+    <ul>
+        <li class="ex264li">LI</li>
+        <li class="ex264li">LI</li>
+    </ul>
+
+    <script src="rgb.js"></script>
+</body>
+
+</html>

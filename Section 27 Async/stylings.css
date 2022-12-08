@@ -1,0 +1,19 @@
+body{
+    /* background: #704214; */
+}
+p{
+    font-size: large;
+    font-weight: 300;
+}
+.pEm{
+    font-size: large;
+    font-weight: 600;
+    display: inline;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+.imgEmphasis{
+    background-color: #704214;
+    width: 500px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Javascript</title>
+    <link rel="stylesheet" href="stylings.css">
+
+</head>
+
+<body>
+    <h1>Chapter 27 - Async Javascript</h1>
+
+    <h2>Section 274</h2>
+    <p>Taught the basics of callStack, includes the functions <b>multiply</b>, <b>Square</b> and <b>isRightTriangle</b>
+        in 273_callStack.js</p>
+
+    <p><b>call stack</b> is the mechanism that JS keeps track
+        of where it is in a bunch of function calls.
+        which function it is using and what functions are
+        inside the current function </p>
+    <p>
+        Works on a <b>LIFO</b> (Last in first out) model. Imagine
+        stacking plates one after another. The plate you
+        added last will be the first plate picked up
+        or used.</p>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pikpng.com%2Fpngl%2Fb%2F268-2688177_plates-png.png&f=1&nofb=1"
+        alt="" class="imgEmphasis">
+
+
+    <p>Calling <span class="pEm"> isRightTriangle(3,4,5)</span> we first place it in the call stack then look at
+        the function definition, finding the <span class="pEm">Square</span> function and then placing <span class="pEm">square(3)</span> which adds it as a Call above the initial call of <span class="pEm"> isRight Triangle.</span>
+    </p>
+    <p>The function definition of <span class="pEm">Square(3)</span> states that it needs to <span class="pEm">Multiply(3*3)</span> which places a <span class="pEm">Multiply</span> call above the <span class="pEm">Square</span> call.</p>
+    <p>The call stack looks like this: <span class="pEm">0) Multiply(3,3). 1)Square(3). 2) isRightTriangle(3,4,5)</span> where since Multiply and Span are evaulated, they get removed from the call stack.</p>
+    <p>This gets repeated when isRightTriangle needs to call square(4), and then again for Square(5). Until isRightTriangle is fully evaluated it does not leave the call stack.</p>
+
+    <p class="pEm">There is a tool called Loupe which visualises this or use the Sources tab. make a breakpoint on the function.</p>
+    
+    <h2>Section 274</h2>
+    <p>JS is <span class="pEm">Single-Threaded :(((</span> which means that it can only run a single line of JS code in every moment in time</p>
+
+    <p>When each line can take a couple of seconds we don't want the app to stop running. There are ways around this. An example is setTimeout() callback used previously.</p>
+
+    <p>The browser handles all the the tasks through WebAPIs that require timing. The browsers pass the tasks back to the stack as a callback</p>
+
+    <h2>Section 275</h2>
+
+    <p>Took a look here how callbacks are prone to growing increasingly large if you want any kind of functionality</p>
+    <p>This expands as you add control statements like: if(this){callback} else{callback 2}.</p>
+    <p>Since this is passed on to the browser and JS doesn't care about it really, it will be difficult to work with if shit goes wrong</p>
+
+    <h2>Section 276</h2>
+    
+    <p>Had to revisit callbacks here, was pretty difficult.</p>
+    <p>Need to understand that defining a function argument in a callback lets you define the argument when you call it, and you don't need a local variable name at that point</p>
+    <p>Chained the request callbacks together. Looked like a classic callback hell.</p>
+
+    <h2>Section 277</h2>
+    
+    <p>Promises are a object which represent a "promise" of something that would be complete</p>
+    
+
+    <script src="277_fakeRequestPromises.js"></script>
+</body>
+
+</html>
